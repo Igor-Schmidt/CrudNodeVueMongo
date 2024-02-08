@@ -26,22 +26,22 @@ module.exports = {
         res.json({status: true, message: 'Returning users', data});
     },
     async newUser(req, res){
-        if(!has(req.body, ['name', 'email']))
+        if(!has(req.body, ['name', 'email', 'birth']))
             throw {code: status.BAD_REQUEST, message: 'You must specify the name and email'};
 
-        let { name, email } = req.body;
+        let { name, email, birth } = req.body;
         
-        await userModel.create({name, email});
+        await userModel.create({name, email, birth});
 
         res.json({status: true, message: 'User Added'});
     },
     async updateUser(req, res){
-        if(!has(req.body, ['id', 'name', 'email']))
+        if(!has(req.body, ['id', 'name', 'email', 'birth']))
             throw {code: status.BAD_REQUEST, message: 'You must specify the id, name and email'};
 
-        let { id, name, email } = req.body;
+        let { id, name, email, birth } = req.body;
     
-        await userModel.updateUser({name, email}, {where:{id}});
+        await userModel.updateUser({name, email, birth}, {where:{id}});
 
         res.json({status: true, message: 'User updated'});
     },
@@ -55,4 +55,14 @@ module.exports = {
 
         res.json({status: true, message: 'User deleted'});
     }
+    // async deleteUserByName(req, res){
+    //     if(!has(req.params, 'name'))
+    //         throw {code: status.BAD_REQUEST, message: 'You must specify the id'};
+
+    //     let { name } = req.params;
+
+    //     await userModel.destroy({where: {name}});
+
+    //     res.json({status: true, message: 'User deleted'});
+    // }
 }

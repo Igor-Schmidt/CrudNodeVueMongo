@@ -12,6 +12,7 @@
     "bootstrap": "^5.3.2",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
+    "sweetalert2": "^11.10.5",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vue-sweetalert2": "^5.0.5"
@@ -44,8 +45,15 @@
     "rules": {
       "no-unused-vars": "off",
       "vue/no-unused-components": "off",
-      "linebreak-style":0,
-      "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
+      "linebreak-style": 0,
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ]
     }
   },
   "browserslist": [

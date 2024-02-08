@@ -13,7 +13,7 @@ export default {
   },
   // Metodo listar todos Users
   // (GET) localhost:3000/api/users
-  async getUsers() {
+  async getAllUsers() {
     try {
       const response = await apiHttp().get('/users');
       return response.data;

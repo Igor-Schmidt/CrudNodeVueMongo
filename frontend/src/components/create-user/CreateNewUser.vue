@@ -52,7 +52,7 @@
             <!-- FIM DE BLOCO: New User - Birth -->
 
             <div class="form-group">
-              <button v-on:click="envioNewUser()"
+              <button v-on:click="envioNewUser(); this.$router.push({ name: 'list' })"
                 class="btn btn-primary"
                 type="submit">+ Register
               </button>
