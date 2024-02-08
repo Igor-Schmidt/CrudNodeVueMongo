@@ -4,21 +4,21 @@ import NProgess from 'nprogress';
 const routes = [
   {
     //  Página New User POST
-    path: '/',
-    name: 'Create New User',
-    component: () => import('../components/create-employee/CreateNewUser.vue'),
+    path: '/new-user',
+    name: 'newuser',
+    component: () => import('../components/create-user/CreateNewUser.vue'),
   },
   {
     //  Página List Users Get all
-    path: '/list-employee',
-    name: 'List Users',
-    component: () => import('../components/list-employee/ListUsers.vue'),
+    path: '/list-user',
+    name: 'list',
+    component: () => import('../components/list-user/ListUsers.vue'),
   },
   {
     //  Página Edit User by ID Put/Update
-    path: '/edit-employee/:_id',
-    name: 'Edit User',
-    component: () => import('../components/edit-employee/EditUser.vue'),
+    path: '/edit-user/:id',
+    name: 'edituser',
+    component: () => import('../components/edit-user/EditUser.vue'),
   },
 ];
 

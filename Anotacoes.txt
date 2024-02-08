@@ -1,0 +1,3 @@
+$ npm start --> dentro de backend levanta backend
+$ npm run serve --> dentro de front roda serve que executa front
+$ npm run lint --fix --> arruma de acordo com eslint

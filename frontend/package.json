@@ -43,7 +43,9 @@
     },
     "rules": {
       "no-unused-vars": "off",
-      "vue/no-unused-components": "off"
+      "vue/no-unused-components": "off",
+      "linebreak-style":0,
+      "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
     }
   },
   "browserslist": [
