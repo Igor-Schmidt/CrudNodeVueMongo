@@ -13,7 +13,7 @@ module.exports = {
 
         let {id} = req.params;
 
-        let data = await userModel.findOne({where: {id}});
+        let data = await userModel.search(id);
 
         if(!data)
             throw {code: status.BAD_REQUEST, message: 'User not found'};
@@ -51,18 +51,8 @@ module.exports = {
 
         let { id } = req.params;
 
-        await userModel.destroy({where: {id}});
+        await userModel.delete(id);
 
         res.json({status: true, message: 'User deleted'});
     }
-    // async deleteUserByName(req, res){
-    //     if(!has(req.params, 'name'))
-    //         throw {code: status.BAD_REQUEST, message: 'You must specify the id'};
-
-    //     let { name } = req.params;
-
-    //     await userModel.destroy({where: {name}});
-
-    //     res.json({status: true, message: 'User deleted'});
-    // }
 }

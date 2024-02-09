@@ -1,7 +1,7 @@
 
 
 const database = require('./database.js');
-
+const ObjectId = require('mongodb').ObjectId;
 
 const users = {
 
@@ -14,9 +14,10 @@ const users = {
     async search(good) {
         const dbo = await database.getDbo();
 
-        const {_id} = good;
+        // const {_id} = good;
 
-        return await dbo.collection('users').find({_id: new ObjectId(_id)}).toArray();
+        // return await dbo.collection('users').find({_id: new ObjectId(_id)}).toArray();
+        return await dbo.collection('users').find({ _id: new ObjectId(good) }).toArray();
     },
 
     async create(good) {
@@ -44,7 +45,8 @@ const users = {
 
         const {_id} = good;
         
-        await dbo.collection('users').deleteOne({_id: new ObjectId(_id)});
+        // await dbo.collection('users').deleteOne({_id: new ObjectId(_id)});
+        await dbo.collection('users').deleteOne({_id: new ObjectId(good) });
     }
 
 }
