@@ -17,7 +17,10 @@ export default {
     },
 
     async removeUser(id) {
+      // Deleta dps lista novamente
       await UserDataServices.deleteUser(id);
+      await this.listAllUsers();
+
     //   this.$swal({
     //     title: 'Deletar user?',
     //     text: 'Cuidado! Este user sera deletado!',
