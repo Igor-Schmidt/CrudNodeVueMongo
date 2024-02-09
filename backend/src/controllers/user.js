@@ -36,14 +36,18 @@ module.exports = {
         res.json({status: true, message: 'User Added'});
     },
     async updateUser(req, res){
-        if(!has(req.body, ['id', 'name', 'email', 'birth']))
-            throw {code: status.BAD_REQUEST, message: 'You must specify the id, name and email'};
-
-        let { id, name, email, birth } = req.body;
+        try {
+            if(!has(req.body, ['id', 'name', 'email', 'birth']))
+                throw {code: status.BAD_REQUEST, message: 'You must specify the id, name and email'};
     
-        await userModel.updateUser({name, email, birth}, {where:{id}});
-
-        res.json({status: true, message: 'User updated'});
+            let { id, name, email, birth } = req.body;
+        
+            await userModel.updateUser({id, name, email, birth});
+    
+            res.json({status: true, message: 'User updated'});
+        } catch (error) {
+            console.log(error)
+        }
     },
     async deleteUser(req, res){
         if(!has(req.params, 'id'))

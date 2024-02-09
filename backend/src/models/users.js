@@ -36,6 +36,7 @@ const users = {
         
         delete good._id;
         delete good.id;
+        console.log(good, idUser)
 
         return await dbo.collection('users').findOneAndUpdate({_id:  new ObjectId(idUser)},{$set: good},{ returnNewDocument: true });
     },

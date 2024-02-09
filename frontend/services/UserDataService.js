@@ -33,13 +33,16 @@ export default {
   },
   // Metodo atualizar usuario 'user'
   // (PUT) localhost:3000/api/users/:id
-  async putUser(id) {
-    try {
-      const response = await apiHttp().put(`/users/${id}`);
-      return response.data;
-    } catch (error) {
-      return (error);
-    }
+  async putUser(usuarioUpdate) {
+    const response = await apiHttp().put(`/users/${usuarioUpdate.id}`);
+    // try {
+    //   const userId = usuarioUpdate.id;
+    //   console.log(userId);
+    //   const response = await apiHttp().put(`/users/${userId}`);
+    //   return response.data;
+    // } catch (error) {
+    //   return (error);
+    // }
   },
   // Metodo de exclusão de usuario 'user'
   // (DELETE) localhost:3000/api/users/:id
