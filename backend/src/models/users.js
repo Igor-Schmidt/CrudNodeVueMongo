@@ -32,12 +32,12 @@ const users = {
     async update(good) {
         const dbo = await database.getDbo();
 
-        const {_id} = good;
+        const idUser = good.id;
         
         delete good._id;
         delete good.id;
 
-        return await dbo.collection('users').findOneAndUpdate({_id:  new ObjectId(_id)},{$set: good},{ returnNewDocument: true });
+        return await dbo.collection('users').findOneAndUpdate({_id:  new ObjectId(idUser)},{$set: good},{ returnNewDocument: true });
     },
 
     async delete(good) {

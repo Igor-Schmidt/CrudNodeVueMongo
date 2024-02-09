@@ -14,7 +14,7 @@ router.post('/api/users', user.newUser);
 
 router.delete('/api/users/:id', user.deleteUser);
 
-router.put('/api/users', user.updateUser);
+router.put('/api/users/:id', user.updateUser);
 
 // router.delete('/users/:name', user.deleteUserByName);
 
