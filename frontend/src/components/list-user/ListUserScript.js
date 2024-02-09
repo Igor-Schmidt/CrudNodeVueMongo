@@ -20,7 +20,6 @@ export default {
       // Deleta dps lista novamente
       await UserDataServices.deleteUser(id);
       await this.listAllUsers();
-
     //   this.$swal({
     //     title: 'Deletar user?',
     //     text: 'Cuidado! Este user sera deletado!',
@@ -42,6 +41,10 @@ export default {
     //       this.$swal('Cancelled', 'Cancel deletion', 'info');
     //     }
     //   });
+    },
+
+    mudarPaginaUpdate(paramId) {
+      this.$route.push({ name: 'edituser', params: paramId });
     },
   },
 };
