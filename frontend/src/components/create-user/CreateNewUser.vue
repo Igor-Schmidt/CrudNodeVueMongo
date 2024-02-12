@@ -13,6 +13,7 @@
                 <br>
                 <input type="text"
                   id="userFormName"
+                  class="form-control"
                   placeholder="Type user name"
                   v-model="usuario.name"
                   required
@@ -28,6 +29,7 @@
                 <br>
                 <input type="text"
                   id="userFormEmail"
+                  class="form-control"
                   placeholder="Type user email"
                   v-model="usuario.email"
                   required
@@ -43,6 +45,7 @@
                 <br>
                 <input type="date"
                   id="userFormBirth"
+                  class="form-control"
                   v-model="usuario.birth"
                   required
                 >

@@ -42,7 +42,7 @@ module.exports = {
     
             let { id, name, email, birth } = req.body;
         
-            await userModel.updateUser({id, name, email, birth});
+            await userModel.update({id, name, email, birth});
     
             res.json({status: true, message: 'User updated'});
         } catch (error) {

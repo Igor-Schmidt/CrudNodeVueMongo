@@ -4,7 +4,7 @@ import NProgess from 'nprogress';
 const routes = [
   {
     //  Página New User POST
-    path: '/new-user',
+    path: '/',
     name: 'newuser',
     component: () => import('../components/create-user/CreateNewUser.vue'),
   },

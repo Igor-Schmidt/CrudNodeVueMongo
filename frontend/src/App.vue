@@ -5,7 +5,7 @@
         <a class="navbar-brand" href="#">CRUD Vue JS + Node + MongoDB</a>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/new-user">Create New User</router-link>
+            <router-link class="nav-link" to="/">Create New User</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/list-user">List Users</router-link>
