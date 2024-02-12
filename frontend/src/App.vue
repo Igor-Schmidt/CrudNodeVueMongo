@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg" id="navbar-custom">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CRUD Vue JS + Node + MongoDB</a>
+        <a class="navbar-brand" href="/">CRUD Vue JS + Node + MongoDB</a>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <router-link class="nav-link" to="/">Create New User</router-link>
@@ -18,3 +18,5 @@
     </div>
   </div>
 </template>
+
+<style src="./components/StyleMain.css"></style>

@@ -8,3 +8,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#navbar-custom {
+    background-color: #3C3C3C;
+    --bs-navbar-brand-hover-color: white;
+    --bs-navbar-hover-color: white;
+}
