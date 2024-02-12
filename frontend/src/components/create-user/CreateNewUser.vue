@@ -50,7 +50,7 @@
 
             <div class="form-group">
               <button v-on:click="envioNewUser(); this.$router.push({ name: 'list' })"
-                class="btn btn-primary" id=""
+                class="btn btn-primary"
                 type="submit"
                 >+ Register
               </button>
