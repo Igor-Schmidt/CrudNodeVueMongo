@@ -11,11 +11,15 @@ import 'nprogress/nprogress.css';
 
 // createApp(App).use(router, Swal).mount('#app');
 
+import TesteProp from './components/testeProps.vue';
+
 // -------------------------------------------------
 const app = createApp(App);
 
 app.use(router);
 
 app.use(VueSweetalert2);
+
+app.component('testeProp', TesteProp);
 
 app.mount('#app');
