@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="text-center">List Users</h3>
+        <h3 class="text-center" id="h3-top-list">List Users</h3>
         <div>
           <table class="table align-middle">
             <thead>
@@ -9,6 +9,8 @@
                 <th>Email</th>
                 <th>Birth</th>
                 <th>_id User</th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -21,12 +23,16 @@
                   <button
                     v-on:click="
                     this.$router.push({ name: 'edituser', params:{id:user._id}})"
-                    class="btn btn-primary">
+                    class="btn btn-primary"
+                    >
                     <font-awesome-icon :icon="['fas', 'trash']" /> Edit
                   </button>
                 </td>
                 <td>
-                  <button v-on:click="removeUser(user._id)" class="btn btn-danger">
+                  <button
+                    v-on:click="removeUser(user._id)"
+                    class="btn btn-danger"
+                    >
                     <font-awesome-icon :icon="['fas', 'trash']" /> Delete
                   </button>
                 </td>
@@ -38,4 +44,5 @@
     </template>
 
 <script src="./ListUserScript.js"></script>
-<style></style>
+<style src="../StyleMain.css"></style>
+<style src="./ListUserStyle.css"></style>

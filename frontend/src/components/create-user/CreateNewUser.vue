@@ -67,4 +67,5 @@
 </template>
 
 <script src="./NewUserScript.js"></script>
+<style src="../StyleMain.css"></style>
 <style src="./NewUserStyle.css"></style>

@@ -70,4 +70,5 @@
 </template>
 
 <script src="./EditUserScript.js"></script>
-<style></style>
+<style src="../StyleMain.css"></style>
+<style src="./EditUserStyle.css"></style>

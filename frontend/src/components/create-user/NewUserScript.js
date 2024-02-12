@@ -17,14 +17,16 @@ export default {
     async envioNewUser() {
       try {
         await UserDataServices.postNewUser(this.usuario);
-        // this.$swal({
-        //   title: 'User cadastrado com Sucesso!',
-        //   icon: 'success',
-        //   position: 'top-end',
-        //   showConfirmButton: false,
-        //   timer: 2000,
-        //   timerProgressBar: true,
-        // });
+
+        this.$swal({
+          title: 'User cadastrado com Sucesso!',
+          icon: 'success',
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+        });
 
         // this.$router.push({ name: 'list' });
       } catch (error) {
