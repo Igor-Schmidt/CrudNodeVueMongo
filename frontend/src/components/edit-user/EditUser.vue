@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="card">
+  <div class="container" id="container-animation">
+    <div class="card" id="card-geral-form">
       <div class="card-header">
         <h3>Edit User</h3>
       </div>
@@ -10,7 +10,6 @@
           <!-- INICIO DE BLOCO: New User - Name -->
           <div class="form-group">
             <label for="userFormName" class="font-weight-bold">User Name
-              <br>
               <input
                 type="text"
                 id="userFormName"
@@ -21,13 +20,11 @@
                 >
             </label>
           </div>
-          <br>
           <!-- FIM DE BLOCO: New User - Name -->
 
           <!-- INICIO DE BLOCO: New User - Email -->
           <div class="form-group">
             <label for="userFormEmail" class="font-weight-bold">User Email
-              <br>
               <input
                 type="text"
                 id="userFormEmail"
@@ -38,13 +35,11 @@
               >
             </label>
           </div>
-          <br>
           <!-- FIM DE BLOCO: New User - Email -->
 
           <!-- INICIO DE BLOCO: New User - Birth -->
           <div class="form-group">
             <label for="userFormBirth" class="font-weight-bold">User Birth
-              <br>
               <input
                 type="date"
                 id="userFormBirth"
@@ -54,7 +49,6 @@
               >
             </label>
           </div>
-          <br>
           <!-- FIM DE BLOCO: New User - Birth -->
 
           <div class="form-group">

@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-      <div class="card">
+    <div class="container" id="container-animation">
+      <div class="card" id="card-geral-form">
         <div class="card-header">
           <h3>New User</h3>
         </div>
@@ -10,7 +10,6 @@
             <!-- INICIO DE BLOCO: New User - Name -->
             <div class="form-group">
               <label for="userFormName" class="font-weight-bold">User Name
-                <br>
                 <input type="text"
                   id="userFormName"
                   class="form-control"
@@ -20,13 +19,11 @@
                 >
               </label>
             </div>
-            <br>
             <!-- FIM DE BLOCO: New User - Name -->
 
             <!-- INICIO DE BLOCO: New User - Email -->
             <div class="form-group">
               <label for="userFormEmail" class="font-weight-bold">User Email
-                <br>
                 <input type="text"
                   id="userFormEmail"
                   class="form-control"
@@ -36,13 +33,11 @@
                 >
               </label>
             </div>
-            <br>
             <!-- FIM DE BLOCO: New User - Email -->
 
             <!-- INICIO DE BLOCO: New User - Birth -->
             <div class="form-group">
               <label for="userFormBirth" class="font-weight-bold">User Birth
-                <br>
                 <input type="date"
                   id="userFormBirth"
                   class="form-control"
@@ -51,13 +46,13 @@
                 >
               </label>
             </div>
-            <br>
             <!-- FIM DE BLOCO: New User - Birth -->
 
             <div class="form-group">
               <button v-on:click="envioNewUser(); this.$router.push({ name: 'list' })"
-                class="btn btn-primary"
-                type="submit">+ Register
+                class="btn btn-primary" id=""
+                type="submit"
+                >+ Register
               </button>
             </div>
           </form>
