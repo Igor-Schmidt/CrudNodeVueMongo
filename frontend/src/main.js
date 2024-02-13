@@ -11,7 +11,8 @@ import 'nprogress/nprogress.css';
 
 // createApp(App).use(router, Swal).mount('#app');
 
-import TesteProp from './components/testeProps.vue';
+import TesteProp from './components/tests/testeProps.vue';
+import TesteLifecycle from './components/tests/testeLifecycleHooks.vue';
 
 // -------------------------------------------------
 const app = createApp(App);
@@ -21,5 +22,6 @@ app.use(router);
 app.use(VueSweetalert2);
 
 app.component('testeProp', TesteProp);
+app.component('testeLifecycle', TesteLifecycle);
 
 app.mount('#app');

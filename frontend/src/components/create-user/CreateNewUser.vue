@@ -56,10 +56,6 @@
               </button>
             </div>
           </form>
-          <testeProp
-            teste-teste1="Teste de Prop 01"
-            testeTeste2="Teste de Prop 02"
-          />
         </div>
       </div>
     </div>

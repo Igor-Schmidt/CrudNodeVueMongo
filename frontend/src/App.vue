@@ -10,6 +10,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/list-user">List Users</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/testes">Testes de Vue</router-link>
+          </li>
         </ul>
       </div>
     </nav>

@@ -20,6 +20,12 @@ const routes = [
     name: 'edituser',
     component: () => import('../components/edit-user/EditUser.vue'),
   },
+  {
+    //  Página Edit User by ID Put/Update
+    path: '/testes',
+    name: 'testes',
+    component: () => import('../components/tests/mainTestes.vue'),
+  },
 ];
 
 const router = createRouter({
