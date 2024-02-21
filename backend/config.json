@@ -1,0 +1,11 @@
+{
+    "connexaoDB":{
+        "userMongo":"igorzs",
+        "passMongo":"12qwaszx",
+        "host": "127.0.0.1:27017",
+        "options":{
+            "useNewUrlParser":true,
+            "useUnifiedTopology":true
+        }
+    }
+}

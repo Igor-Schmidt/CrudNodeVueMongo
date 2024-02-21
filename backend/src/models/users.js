@@ -5,14 +5,14 @@ const ObjectId = require('mongodb').ObjectId;
 
 const users = {
 
-    async getAll() {
-        const dbo = await database.getDbo();
+    async getAll(req) {
+        const dbo = await database.getDbo(req);
 
         return await dbo.collection('users').find().toArray();
     },
 
-    async search(good) {
-        const dbo = await database.getDbo();
+    async search(good,req) {
+        const dbo = await database.getDbo(req);
 
         // const {_id} = good;
 
@@ -20,8 +20,8 @@ const users = {
         return await dbo.collection('users').find({ _id: new ObjectId(good) }).toArray();
     },
 
-    async create(good) {
-        const dbo = await database.getDbo();
+    async create(good,req) {
+        const dbo = await database.getDbo(req);
         
         delete good._id;
         delete good.id;
@@ -29,8 +29,8 @@ const users = {
         return (await dbo.collection('users').insertOne(good)).ops[0];
     },
 
-    async update(good) {
-        const dbo = await database.getDbo();
+    async update(good,req) {
+        const dbo = await database.getDbo(req);
 
         const idUser = good.id;
         
@@ -40,8 +40,8 @@ const users = {
         return await dbo.collection('users').findOneAndUpdate({_id:  new ObjectId(idUser)},{$set: good},{ returnNewDocument: true });
     },
 
-    async delete(good) {
-        const dbo = await database.getDbo();
+    async delete(good,req) {
+        const dbo = await database.getDbo(req);
 
         const {_id} = good;
         
