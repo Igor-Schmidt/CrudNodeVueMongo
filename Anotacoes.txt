@@ -1,3 +1,24 @@
 $ npm start --> dentro de backend levanta backend
 $ npm run serve --> dentro de front roda serve que executa front
 $ npm run lint --fix --> arruma de acordo com eslint
+
+20/02/24 - 21/02/24
+
+Autenticando o MongoDB e Projeto CRUD
+1. Foi visto como criar usuario no mongodb e como habilitar o security do mongo via arquivo .cfg
+
+2. Apartir disso foi alterado o projeto pessoal NodeVueMongoDB, começando pelo backend, as operacoes
+da api CRUD deveria agora serem executadas passando o usuario e senha criados no mongodb para entao 
+poderem consumir a base de dados mongodb e cadastrar novas informacoes foi desenvolvido então, que
+todas as operacao seriao executadas utilizando as credencias do user criado no mongosh, ou seja ao 
+executar o postman por exemplo nao era necessario na aba auth definir um basic auth pois no backend 
+ele ja estava setando por padrao.
+
+3. Alterado para o código backend pegar a autenticacao de user e password atraves do headers da solicitacao.
+E retirado o auto-set de credencias no backend que foi citado no topico 2.
+
+4. Alteado para o frontend passar user e pwd ao executar alguma funcao (get,post,put,delete), por padrao
+ja esta passando o user e pwd que foi criado para o mongo. O proximo passo seria atraves do cadastro de
+novo usuario do front, desenvolver um login de usuario onde posteriormente apenas o user admin porem deletar
+usuarios do front, e por ex. usuario: 'jao1' poderia alterar apenas os seus dados e listar users.
+
