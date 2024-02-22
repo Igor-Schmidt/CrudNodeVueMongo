@@ -2,6 +2,8 @@ $ npm start --> dentro de backend levanta backend
 $ npm run serve --> dentro de front roda serve que executa front
 $ npm run lint --fix --> arruma de acordo com eslint
 
+
+=======================================================================================================================
 20/02/24 - 21/02/24
 
 Autenticando o MongoDB e Projeto CRUD
@@ -22,3 +24,9 @@ ja esta passando o user e pwd que foi criado para o mongo. O proximo passo seria
 novo usuario do front, desenvolver um login de usuario onde posteriormente apenas o user admin porem deletar
 usuarios do front, e por ex. usuario: 'jao1' poderia alterar apenas os seus dados e listar users.
 
+PROXIMOS PASSOS: 
+- Desenvolver tela de login
+- Auto-create de user admin para a aplicação
+- Implementar o quesito valida credencias de usuario e suas permissoes como o 
+  que ele como usuario podera acessar, fazer (listar e alterar seu proprio cadastro por exemplo).
+=======================================================================================================================
