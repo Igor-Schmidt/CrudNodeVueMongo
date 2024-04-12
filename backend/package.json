@@ -4,6 +4,7 @@
     "description": "backend is the ultimate backend solution",
     "main": "src/server.js",
     "scripts": {
+        "startND": "nodemon ./src/serve.js",
         "setup": "npm install && npm update",
         "start": "node src/server.js"
     },
@@ -27,6 +28,7 @@
         "mongodb": "^3.3.3",
         "mongoose": "^5.13.22",
         "morgan": "^1.9.1",
+        "nodemon": "^3.1.0",
         "rotating-file-stream": "^1.4.6"
     }
 }
